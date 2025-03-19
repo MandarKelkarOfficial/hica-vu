@@ -18,13 +18,13 @@ HICA (Higher Institute Campus Ambassadors) Club is a vibrant community of studen
   <table>
     <tr>
       <td align="center">
-        <img src="https://img.icons8.com/color/96/000000/workshop.png" alt="Workshops" width="60"/>
+        <img src="https://img.icons8.com/fluency/96/000000/workshop.png" alt="Workshops" width="60"/>
         <br>
         <strong>Workshops</strong>
         <p>Hands-on sessions to learn new skills and technologies.</p>
       </td>
       <td align="center">
-        <img src="https://img.icons8.com/color/96/000000/mentor.png" alt="Mentorship" width="60"/>
+        <img src="https://img.icons8.com/color/96/000000/teacher.png" alt="Mentorship" width="60"/>
         <br>
         <strong>Mentorship</strong>
         <p>Guidance from industry experts to help you grow.</p>
@@ -44,13 +44,13 @@ HICA (Higher Institute Campus Ambassadors) Club is a vibrant community of studen
         <p>Opportunities to gain real-world experience.</p>
       </td>
       <td align="center">
-        <img src="https://img.icons8.com/color/96/000000/community.png" alt="Community" width="60"/>
+        <img src="https://img.icons8.com/color/96/000000/group.png" alt="Community" width="60"/>
         <br>
         <strong>Community</strong>
         <p>A collaborative space to connect and learn together.</p>
       </td>
       <td align="center">
-        <img src="https://img.icons8.com/color/96/000000/career.png" alt="Career" width="60"/>
+        <img src="https://img.icons8.com/color/96/000000/monitor.png" alt="Career" width="60"/>
         <br>
         <strong>Career Prep</strong>
         <p>Training to help you excel in the job market.</p>
@@ -73,9 +73,9 @@ HICA (Higher Institute Campus Ambassadors) Club is a vibrant community of studen
 ## 📈 Our Stats
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=hica-club&show_icons=true&theme=radical" alt="GitHub Stats" />
+  <img src="https://github-readme-stats.vercel.app/api?username=HICA-VU&show_icons=true&theme=radical" alt="GitHub Stats" />
   <br>
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=hica-club&theme=radical" alt="GitHub Streak" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=HICA-VU&theme=radical" alt="GitHub Streak" />
 </div>
 
 ---
