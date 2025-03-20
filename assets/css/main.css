@@ -144,7 +144,9 @@ h6 {
 --------------------------------------------------------------*/
 .header {
   color: var(--default-color);
-  background-color: var(--background-color);
+  /* background-color: var(--background-color); */
+  
+  background: linear-gradient(to right,#1e0f32, #08050f,#1e0f32, #08050f, #1e0f32);
   padding: 20px 0;
   transition: all 0.5s;
   z-index: 997;
