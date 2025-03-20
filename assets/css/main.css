@@ -19,18 +19,19 @@
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #012970; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #4154f1; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --background-color: #060606; /* Background color for the entire website, including individual sections */
+  --default-color: #fff; /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #FF00F2; /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #FF00F2; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #012970;  /* The default color of the main navmenu links */
-  --nav-hover-color: #4154f1; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-color: #ffffff;  /* The default color of the main navmenu links */
+  --nav-hover-color: #FF00F2; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #212529; /* Used for navigation links of the dropdown items in the navigation menu. */
@@ -48,7 +49,7 @@
   --background-color: #060606;
   --default-color: #ffffff;
   --heading-color: #ffffff;
-  --surface-color: #252525;
+  --surface-color: #5c5555;
   --contrast-color: #ffffff;
 }
 
@@ -213,7 +214,7 @@ h6 {
 /* Index Page Header on Scroll
 ------------------------------*/
 .index-page.scrolled .header {
-  --background-color: #ffffff;
+  --background-color: rgba(17, 15, 37, 0.95);
 }
 
 /*--------------------------------------------------------------
@@ -993,7 +994,7 @@ section,
 # Values Section
 --------------------------------------------------------------*/
 .values .card {
-  background-color: var(--surface-color);
+  background-color:#b69bb436;
   color: var(--default-color);
   padding: 30px;
   box-shadow: 0px 0 10px rgba(0, 0, 0, 0.1);
@@ -1665,11 +1666,17 @@ section,
   text-align: center;
   border-radius: 5px;
   transition: 0.3s;
+  /* border: 1.5px solid purple; */
+  border: 2px solid purple;
 }
 
 .team .team-member .member-img {
   position: relative;
   overflow: hidden;
+      width: 100%;  /* Make images fill their container */
+    height: 400px; /* Set a fixed height */
+    object-fit: cover;
+
 }
 
 .team .team-member .member-img:after {
@@ -1679,10 +1686,12 @@ section,
   right: -1px;
   bottom: -1px;
   height: 100%;
-  background-color: var(--surface-color);
+  background: black; /* Set black color */
   -webkit-mask: url("../img/team-shape.svg") no-repeat center bottom;
   mask: url("../img/team-shape.svg") no-repeat center bottom;
   -webkit-mask-size: contain;
+  mask-composite: exclude;
+  
   mask-size: contain;
   z-index: 1;
 }
@@ -1727,9 +1736,9 @@ section,
 
 .team .team-member .member-info span {
   display: block;
-  font-size: 14px;
-  font-weight: 400;
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
+  font-size: 16px;
+  font-weight: 600;
+  color: color-mix(in srgb, var(--default-color), transparent 0%);
 }
 
 .team .team-member .member-info p {
@@ -1826,11 +1835,11 @@ section,
 
 .recent-posts .post-item .meta span {
   font-size: 15px;
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
+  color: color-mix(in srgb, var(--default-color), transparent 0%);
 }
 
 .recent-posts .post-item hr {
-  color: color-mix(in srgb, var(--default-color), transparent 80%);
+  color: color-mix(in srgb, var(--default-color), transparent 0%);
   margin: 20px 0;
 }
 
@@ -1840,7 +1849,7 @@ section,
   font-weight: 600;
   line-height: 1;
   transition: 0.3s;
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  color: color-mix(in srgb, var(--default-color), transparent 0%);
 }
 
 .recent-posts .post-item .readmore i {

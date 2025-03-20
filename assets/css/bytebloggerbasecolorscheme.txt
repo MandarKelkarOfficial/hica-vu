@@ -1,0 +1,34 @@
+#FF00F2 - Used for buttons and hover effects.
+
+#784AFD - Used for background blurs and gradients.
+
+#FFFFFF - Used for text and backgrounds.
+
+#012970 - Used for headings and navigation links.
+
+#4154F1 - Used for accent colors and hover effects.
+
+#7C7B97 - Used for secondary text and descriptions.
+
+#6D6C87 - Used for footer links and secondary text.
+
+#9FA8B1 - Used for footer text and copyright information.
+
+#B0B8BF - Used for social media icons and hover effects.
+
+#252525 - Used for dark backgrounds and surfaces.
+
+#060606 - Used for dark backgrounds.
+
+#F9F9F9 - Used for light backgrounds.
+
+#444444 - Used for default text color.
+
+#212529 - Used for dropdown navigation links.
+
+#9FA8B1 - Used for footer text and copyright information.
+
+#B0B8BF - Used for social media icons and hover effects.
+
+
+department faculty
