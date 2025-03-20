@@ -145,9 +145,7 @@ h6 {
 --------------------------------------------------------------*/
 .header {
   color: var(--default-color);
-  /* background-color: var(--background-color); */
-  
-  background: linear-gradient(to right,#1e0f32, #08050f,#1e0f32, #08050f, #1e0f32);
+  background-color: var(--background-color);
   padding: 20px 0;
   transition: all 0.5s;
   z-index: 997;
@@ -1675,9 +1673,6 @@ section,
 .team .team-member .member-img {
   position: relative;
   overflow: hidden;
-      width: 100%;  /* Make images fill their container */
-    height: 400px; /* Set a fixed height */
-    object-fit: cover;
 
 }
 
@@ -1688,12 +1683,10 @@ section,
   right: -1px;
   bottom: -1px;
   height: 100%;
-  background: black; /* Set black color */
+  background-color: var(--surface-color);
   -webkit-mask: url("../img/team-shape.svg") no-repeat center bottom;
   mask: url("../img/team-shape.svg") no-repeat center bottom;
   -webkit-mask-size: contain;
-  mask-composite: exclude;
-  
   mask-size: contain;
   z-index: 1;
 }
