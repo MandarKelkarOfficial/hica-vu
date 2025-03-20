@@ -963,6 +963,16 @@ section,
   line-height: 24px;
 }
 
+.btn-read-more {
+  color: var(--contrast-color);
+  background: var(--accent-color);
+  line-height: 0;
+  padding: 15px 40px;
+  border-radius: 4px;
+  transition: 0.5s;
+  box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.1);
+}
+
 .about .content .btn-read-more {
   color: var(--contrast-color);
   background: var(--accent-color);
@@ -1116,7 +1126,7 @@ section,
 # Services Section
 --------------------------------------------------------------*/
 .services .service-item {
-  background-color: var(--surface-color);
+  background-color: #b69bb436;
   box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
   height: 100%;
   padding: 60px 30px;
@@ -1157,20 +1167,20 @@ section,
 }
 
 .services .service-item.item-cyan {
-  border-bottom: 3px solid #0dcaf0;
+  border-bottom: 3px solid #b69bb436;
 }
 
 .services .service-item.item-cyan .icon {
-  color: #0dcaf0;
+  color: #FF00F2;
   background: rgba(13, 202, 240, 0.1);
 }
 
 .services .service-item.item-cyan .read-more {
-  color: #0dcaf0;
+  color: #b69bb436;
 }
 
 .services .service-item.item-cyan:hover {
-  background: #0dcaf0;
+  background: #86047d36;
 }
 
 .services .service-item.item-orange {
@@ -1741,7 +1751,7 @@ section,
   font-size: 14px;
   padding-top: 15px;
   line-height: 26px;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: #fff;
 }
 
 .team .team-member:hover {
@@ -1753,6 +1763,17 @@ section,
   right: 8px;
   opacity: 1;
 }
+
+#modal-description {
+  color: #FF00F2; 
+  font-weight: bold;
+}
+
+.text-muted{
+  color: #FF00F2; 
+  font-weight: bold;
+}
+
 
 /*--------------------------------------------------------------
 # Clients Section

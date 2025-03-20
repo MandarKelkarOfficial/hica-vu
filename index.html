@@ -322,6 +322,7 @@
                         <p>Website: <a href="https://hica-vu.netlify.app/" class="text-white">hica-vu.netlify.app</a>
                         </p>
                       </div>
+                      <img src="./assets/img/event/event_1.jpg" height="500px" width="380px" alt="HICA Event">
                     </div>
                     <div class="col-md-6">
                       <h4 class="text-white">Session Details</h4>
@@ -414,21 +415,25 @@
                   <div class="member-info p-4 text-left w-100">
                     <h4>Kranti Labde</h4>
                     <span class="d-block mb-3">Chapter Lead</span>
+                    <button class="download-btn btn-read-more" data-cv="./assets/cv">
+                      <i class="fas fa-download"></i> Download CV
+                    </button>
+                  
                     <p class="text-muted">Experienced tech leader with 5+ years in community building and open source contributions. Specializes in DevOps and cloud technologies.</p>
                     <div class="row">
                       <div class="col-md-6">
                         <h6>Expertise</h6>
                         <ul class="list-unstyled">
-                          <li>Cloud Architecture</li>
                           <li>Team Management</li>
-                          <li>Technical Workshops</li>
+                          <li>Networking & Relation building</li>
+                          <li>Leadership</li>
                         </ul>
                       </div>
                       <div class="col-md-6">
                         <h6>Contact</h6>
                         <ul class="list-unstyled">
-                          <li>kranti@example.com</li>
-                          <li>+91 98765 43210</li>
+                          <li>krantilabade07@gmail.com</li>
+                          <li>+91 94230 76228</li>
                         </ul>
                       </div>
                     </div>
@@ -517,6 +522,8 @@
               <div class="member-info">
                 <h4>Harsh Mohite</h4>
                 <span>Technical Lead</span>
+                <p class="hidden-description " style="display: none;">Harsh is an experienced technical lead with expertise in software architecture and system design.</p>
+
               </div>
             </div>
           </div><!-- End Team Member -->
@@ -535,6 +542,8 @@
               <div class="member-info">
                 <h4>Mandar Kelkar</h4>
                 <span>Web3 Lead</span>
+                <p class="hidden-description" style="display: none;">Mandar is an experienced technical Web 3 lead with expertise in Blockchain IPFS and Web Development.</p>
+
               </div>
             </div>
           </div><!-- End Team Member -->
@@ -1119,9 +1128,49 @@
 
   </footer>
 
+
+
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
       class="bi bi-arrow-up-short"></i></a>
+
+      <!-- Modal Structure -->
+<div id="teamModal" class="modal fade" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 id="modal-title" class="modal-title"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <!-- Image Column -->
+          <div class="col-md-4">
+            <img id="modal-img" class="img-fluid" src="" alt="" style="object-fit: cover; width: 100%; height: 100%;">
+          </div>
+          <!-- Info Column -->
+          <div class="col-md-8 d-flex align-items-center">
+            <div class="member-info p-4 text-left w-100">
+              <h4 id="modal-name"></h4>
+              <span id="modal-role" class="d-block mb-3"></span>
+              <button class="download-btn btn-read-more" data-cv="./assets/cv/Mandar.pdf">
+                <i class="fas fa-download"></i> Download CV
+              </button>
+              <p id="modal-description" class="text-muted">Click on the profile to know more.</p>
+              <div class="social mt-3">
+                <a id="modal-twitter" href="#" target="_blank"><i class="bi bi-twitter-x"></i></a>
+                <a id="modal-facebook" href="#" target="_blank"><i class="bi bi-facebook"></i></a>
+                <a id="modal-instagram" href="#" target="_blank"><i class="bi bi-instagram"></i></a>
+                <a id="modal-linkedin" href="#" target="_blank"><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -1136,27 +1185,80 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-  $(document).ready(function () {
-    // Click event for team members
-    $(".team-member").click(function () {
-      // Close all other expanded cards
-      $(".team-member").not(this).removeClass("expanded").find(".expandable-content").slideUp(300);
-
-      // Toggle the clicked card
-      $(this).toggleClass("expanded");
-      $(this).find(".expandable-content").slideToggle(300);
-    });
-
-    // Close expanded card when clicking outside
-    $(document).click(function (e) {
-      if (!$(e.target).closest(".team-member").length) {
-        $(".team-member").removeClass("expanded").find(".expandable-content").slideUp(300);
-      }
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- <script>
+  $(document).ready(function() {
+    $(".team-member").click(function() {
+      // Get data from clicked member card
+      let name = $(this).find("h4").text();
+      let role = $(this).find("span").text();
+      let imgSrc = $(this).find("img").attr("src");
+      let twitter = $(this).find(".social a:nth-child(1)").attr("href");
+      let facebook = $(this).find(".social a:nth-child(2)").attr("href");
+      let instagram = $(this).find(".social a:nth-child(3)").attr("href");
+      let linkedin = $(this).find(".social a:nth-child(4)").attr("href");
+  
+      // Populate modal fields
+      $("#modal-title").text(name);
+      $("#modal-name").text(name);
+      $("#modal-role").text(role);
+      $("#modal-img").attr("src", imgSrc).attr("alt", name);
+      $("#modal-twitter").attr("href", twitter || "#");
+      $("#modal-facebook").attr("href", facebook || "#");
+      $("#modal-instagram").attr("href", instagram || "#");
+      $("#modal-linkedin").attr("href", linkedin || "#");
+  
+      // Show modal
+      $("#teamModal").modal("show");
     });
   });
-</script>
+  </script> -->
+  
+  <script>
+    $(document).ready(function() {
+      $(".team-member").click(function() {
+        // Get data from clicked member card
+        let name = $(this).find("h4").text();
+        let role = $(this).find("span").text();
+        let imgSrc = $(this).find("img").attr("src");
+        let description = $(this).find(".hidden-description").text().trim();
+        
+        let twitter = $(this).find(".social a:nth-child(1)").attr("href");
+        let facebook = $(this).find(".social a:nth-child(2)").attr("href");
+        let instagram = $(this).find(".social a:nth-child(3)").attr("href");
+        let linkedin = $(this).find(".social a:nth-child(4)").attr("href");
+    
+        // Populate modal fields
+        $("#modal-title").text(name);
+        $("#modal-name").text(name);
+        $("#modal-role").text(role);
+        $("#modal-img").attr("src", imgSrc).attr("alt", name);
+        $("#modal-description").text(description || "Click on the profile to know more.");
+        $("#modal-twitter").attr("href", twitter || "#");
+        $("#modal-facebook").attr("href", facebook || "#");
+        $("#modal-instagram").attr("href", instagram || "#");
+        $("#modal-linkedin").attr("href", linkedin || "#");
+    
+        // Show modal
+        $("#teamModal").modal("show");
+      });
+    });
 
+
+    $(document).ready(function () {
+      $(".download-btn").click(function () {
+        var cvPath = $(this).attr("data-cv");
+        var link = document.createElement("a");
+        link.href = cvPath;
+        link.download = cvPath.split('/').pop(); // Extracts filename
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      });
+    });
+    
+    </script>
+    
 </body>
 
 </html>
